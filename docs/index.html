@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Tailwind</title>
-    <script type="module" crossorigin src="/test-repo/assets/index-BOaAcBFV.js"></script>
-    <link rel="stylesheet" crossorigin href="/test-repo/assets/index-DfT00PWS.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Artykułów</title>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <h1>Artykuły</h1>
+
+  <label for="sort-select">Sortuj według:</label>
+  <select id="sort-select">
+    <option value="created_at.desc">Po dacie malejąco</option>
+    <option value="created_at.asc">Po dacie rosnąco</option>
+    <option value="title.asc">Po tytule A-Z</option>
+  </select>
+
+  <div id="article-list"></div>
+
+  <h2>Dodaj nowy artykuł</h2>
+  <form id="add-article-form">
+    <input name="title" placeholder="Tytuł" required><br>
+    <input name="subtitle" placeholder="Podtytuł"><br>
+    <input name="author" placeholder="Autor"><br>
+    <textarea name="content" placeholder="Treść" required></textarea><br>
+    <input name="created_at" type="date"><br>
+    <button type="button" id="add-article">Dodaj artykuł</button>
+  </form>
+</body>
 </html>
