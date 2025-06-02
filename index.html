@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Lista Artykułów</title>
+  <script src="./src/main.js" defer></script>
 </head>
 <body>
   <h1>Artykuły</h1>
@@ -14,7 +15,7 @@
     <option value="title.asc">Po tytule A-Z</option>
   </select>
 
-<div id="article-list"></div>
+  <div id="article-list"></div>
 
   <h2>Dodaj nowy artykuł</h2>
   <form id="add-article-form">
@@ -23,10 +24,7 @@
     <input name="author" placeholder="Autor"><br>
     <textarea name="content" placeholder="Treść" required></textarea><br>
     <input name="created_at" type="date"><br>
-    <button type="submit" id="add-article">Dodaj artykuł</button>
+    <button type="submit">Dodaj artykuł</button>
   </form>
-
-<script type="module" src="./src/main.js"></script>
-
 </body>
 </html>
